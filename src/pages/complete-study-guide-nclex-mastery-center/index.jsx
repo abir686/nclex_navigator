@@ -14,35 +14,35 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
 
   // Mock data for NCLEX categories
   const nclexCategories = [
-    {
-      category: 'Safe and Effective Care Environment',
-      progress: 75,
-      estimatedTime: '2h 15m',
-      totalTopics: 24,
-      completedTopics: 18
-    },
-    {
-      category: 'Health Promotion and Maintenance',
-      progress: 60,
-      estimatedTime: '3h 30m',
-      totalTopics: 18,
-      completedTopics: 11
-    },
-    {
-      category: 'Psychosocial Integrity',
-      progress: 45,
-      estimatedTime: '4h 45m',
-      totalTopics: 16,
-      completedTopics: 7
-    },
-    {
-      category: 'Physiological Integrity',
-      progress: 85,
-      estimatedTime: '1h 20m',
-      totalTopics: 32,
-      completedTopics: 27
-    }
-  ];
+  {
+    category: 'Safe and Effective Care Environment',
+    progress: 75,
+    estimatedTime: '2h 15m',
+    totalTopics: 24,
+    completedTopics: 18
+  },
+  {
+    category: 'Health Promotion and Maintenance',
+    progress: 60,
+    estimatedTime: '3h 30m',
+    totalTopics: 18,
+    completedTopics: 11
+  },
+  {
+    category: 'Psychosocial Integrity',
+    progress: 45,
+    estimatedTime: '4h 45m',
+    totalTopics: 16,
+    completedTopics: 7
+  },
+  {
+    category: 'Physiological Integrity',
+    progress: 85,
+    estimatedTime: '1h 20m',
+    totalTopics: 32,
+    completedTopics: 27
+  }];
+
 
   // Handle keyboard shortcuts
   useEffect(() => {
@@ -80,10 +80,10 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
     <>
       <Helmet>
         <title>Complete Study Guide - NCLEX Mastery Center | NCLEX Navigator</title>
-        <meta 
-          name="description" 
-          content="Comprehensive NCLEX preparation hub with evidence-based study methods, interactive content, and progress tracking. Master all four NCLEX categories with our proven methodology." 
-        />
+        <meta
+          name="description"
+          content="Comprehensive NCLEX preparation hub with evidence-based study methods, interactive content, and progress tracking. Master all four NCLEX categories with our proven methodology." />
+
         <meta name="keywords" content="NCLEX study guide, nursing exam preparation, NCLEX categories, study methodology, nursing education" />
         <meta property="og:title" content="Complete Study Guide - NCLEX Mastery Center" />
         <meta property="og:description" content="Master NCLEX with our comprehensive study guide featuring interactive content, progress tracking, and evidence-based learning methods." />
@@ -96,8 +96,8 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
         <div className="bg-gradient-medical text-white py-12">
           <div className="container-medical">
             <div className="max-w-4xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Complete Study Guide
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Israt Jahan Chaite Free NCLEX  Cource Complete Study Guide
+
               </h1>
               <p className="text-xl text-white/90 mb-6">
                 Master all NCLEX categories with our comprehensive, evidence-based study methodology. 
@@ -130,16 +130,16 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {nclexCategories?.map((category, index) => (
-                <StudyProgressRing
-                  key={index}
-                  category={category?.category}
-                  progress={category?.progress}
-                  estimatedTime={category?.estimatedTime}
-                  totalTopics={category?.totalTopics}
-                  completedTopics={category?.completedTopics}
-                />
-              ))}
+              {nclexCategories?.map((category, index) =>
+              <StudyProgressRing
+                key={index}
+                category={category?.category}
+                progress={category?.progress}
+                estimatedTime={category?.estimatedTime}
+                totalTopics={category?.totalTopics}
+                completedTopics={category?.completedTopics} />
+
+              )}
             </div>
           </div>
         </div>
@@ -153,8 +153,8 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
             activeSection={activeSection}
             onSectionChange={handleSectionChange}
             isCollapsed={isSidebarCollapsed}
-            onToggle={toggleSidebar}
-          />
+            onToggle={toggleSidebar} />
+
           <StudyContentArea activeSection={activeSection} />
         </div>
 
@@ -166,14 +166,14 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
           <div className="flex items-center justify-between max-w-md mx-auto">
             <button
               onClick={toggleSidebar}
-              className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg"
-            >
+              className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg">
+
               <span className="text-sm font-medium">Topics</span>
             </button>
             <button
               onClick={() => setShowMethodology(!showMethodology)}
-              className="flex items-center space-x-2 px-4 py-2 bg-muted text-foreground rounded-lg"
-            >
+              className="flex items-center space-x-2 px-4 py-2 bg-muted text-foreground rounded-lg">
+
               <span className="text-sm font-medium">Methods</span>
             </button>
             <button className="flex items-center space-x-2 px-4 py-2 bg-success text-success-foreground rounded-lg">
@@ -188,8 +188,8 @@ const CompleteStudyGuideNCLEXMasteryCenter = () => {
           <div>Ctrl+M: Toggle methodology</div>
         </div>
       </div>
-    </>
-  );
+    </>);
+
 };
 
 export default CompleteStudyGuideNCLEXMasteryCenter;
